@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    public GameObject target;
+    public float mesafe;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        mesafe = Vector3.Distance(transform.position, target.transform.position);
+        Vector3 biggset = Vector3.Max(transform.position, target.transform.position);
+        Vector3 smallset = Vector3.Max(transform.position, target.transform.position);
+        Debug.Log(biggset);
+        Debug.Log(smallset);
+    }
+}
